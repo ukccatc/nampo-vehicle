@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAMPO</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="/images/Masseylogo.png" type="image/x-icon">
+    <link rel="icon" href="images/Masseylogo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -40,7 +40,7 @@
                 <br>
                 <div id="telemetry" class="border border-dark p-3">
                     <p align="center" class="h4">Telemetry</p>
-                    <p><b>Online: </b><span id="tel0">Updating..</span></p>
+                    <p><b></b><span id="tel0">Updating..</span></b></p>
                     <p><b>Parked: </b><span id="tel3">Updating..</span></p>
                     <p><b>Speed: </b><span id="tel1">Updating..</span></p>
                     <p><b>Direction: </b><span id="tel2">Updating..</span></p>
@@ -100,14 +100,20 @@
             const data = await response.json();
             const newLat = data.lat;
             const newLng = data.lng;
-            console.log(data);
+
+            function degToCompass(num) {
+                var val = Math.floor((num / 22.5) + 0.5);
+                var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+                return arr[(val % 16)];
+            }
+
             //Insert telemetry
 
             document.getElementById('tel0').innerHTML = data.online === 1 ? 'Online' : 'Offline';
             document.getElementById('tel1').innerHTML = data.speed + ' km/h';
-            document.getElementById('tel2').innerHTML = data.direction + '° deg';
+            document.getElementById('tel2').innerHTML = degToCompass(data.direction);
             document.getElementById('tel3').innerHTML = data.park/60 + ' min';
-            document.getElementById('tel4').innerHTML = data.mileage + ' miles';
+            document.getElementById('tel4').innerHTML = data.mileage/1000 + ' km';
 
 
             // Update the marker's position
