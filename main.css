@@ -1,0 +1,70 @@
+.iframe-main {
+    overflow:hidden;
+    margin-left:10px;
+    margin-top: 5px;
+    border:none;
+    min-height: 35vh;
+    height: 50%;
+}
+
+#map {
+    height: 400px;
+    width: 99%;
+    margin: 10px auto;
+    overflow: hidden;
+    /*margin-left:10px;*/
+    /*margin-right: 10px;*/
+    /*margin-top: 5px;*/
+    /*padding-right: 20px;*/
+
+}
+
+@media (max-width:550px)  { .iframe-main { width: 95%; } }
+
+@media (min-width: 600px) {
+    .iframe-main {width: 32%;}
+    /*#map {height: 500px; width: 100%; min-height: 45vh; overflow-clip-margin: content-box !important; }*/
+}
+
+/* Basic styling for the container */
+.container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: space-between; /* Horizontal spacing */
+    padding: 20px;
+    border: 1px solid #ccc; /* For visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack children vertically */
+        text-align: center; /* Center text for mobile */
+    }
+    .massey-logo {
+        max-width: 100px; /* Smaller logo on mobile */
+    }
+    .welcome-text {
+        font-size: 20px; /* Smaller text on mobile */
+    }
+}
+
+/* Logo styling */
+.massey-logo {
+    max-width: 100px; /* Limit logo width on desktop */
+}
+
+/* Text styling */
+.welcome-text {
+    font-family: 'Roboto', sans-serif; /* Roboto font */
+    font-size: 30px; /* Larger text on desktop */
+    margin-left: 20px; /* Space between logo and text */
+}
+
+
+/* Social icons styling */
+.social-icons a {
+    margin: 0 10px;
+    color: #333; /* Icon color */
+    font-size: 24px; /* Icon size */
+}
