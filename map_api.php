@@ -19,6 +19,11 @@ if (isResultReceived($loginApi, 'Wrong credentials')) {
         if (isResultReceived($deviceGPS, 'No GPS data received')) {
             $data['lat'] = getFieldFromResult($deviceGPS, 'status', 'mlat');
             $data['lng'] = getFieldFromResult($deviceGPS, 'status', 'mlng');
+            $data['speed'] = getFieldFromResult($deviceGPS, 'status', 'sp');
+            $data['direction'] = getFieldFromResult($deviceGPS, 'status', 'hx');
+            $data['park'] = getFieldFromResult($deviceGPS, 'status', 'pk');
+            $data['mileage'] = getFieldFromResult($deviceGPS, 'status', 'lc');
+            $data['online'] = getFieldFromResult($deviceGPS, 'status', 'ol');
         }
     }
 }
