@@ -6,6 +6,7 @@
     <title>NAMPO</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/Masseylogo.jpg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -13,10 +14,31 @@
 <body style='background-color: #ffffff'>
 <nav class="navbar">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="images/Masseylogo.jpg" alt="Logo" class="d-inline-block align-text-top massey-logo">
-        </a>
-        <div class="welcome-text">NAMPO 2024</div>
+        <div class="row">
+            <div class="col-12">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Masseylogo.jpg" alt="Logo" class="d-inline-block align-text-top massey-logo">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <div class="col-2 align-content-center">
+                <a data-mdb-ripple-init class="btn btn-light social" target="_blank" style="background-color: #3b5998;" href="https://www.facebook.com/MasseyFergusonSA" role="button">
+                    <i class="fab fa-facebook-f" style="color: white"></i>
+                </a>
+            </div>
+            <div class="col-2 align-content-center">
+                <a data-mdb-ripple-init class="btn btn-light instagram social" target="_blank" style="background-color: #E1306C;" href="https://www.instagram.com/masseyfergusonsouthafrica/" role="button">
+                    <i class="fab fa-instagram" style="color: white"></i>
+                </a>
+            </div>
+            <div class="col-8">
+                <div class="welcome-text">NAMPO 2024</div>
+            </div>
+        </div>
     </div>
 </nav>
 <?php //error_reporting(E_ALL);
