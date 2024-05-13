@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body style='background-color: #ffffff'>
-<nav class="navbar" style="">
+<nav class="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="images/Masseylogo.jpg" alt="Logo" class="d-inline-block align-text-top massey-logo">
@@ -25,21 +25,20 @@
 
 <?php if (!empty($showVideos) && (!empty($chanelData))): ?>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm">
-                <iframe src="<?= $chanelData[0] ?>"  scrolling="no" class='iframe-main'></iframe><br>
-                <iframe src="<?= $chanelData[3] ?>"  scrolling="no" class='iframe-main'></iframe>
+        <div class="row p-1">
+            <div class="col-sm p-1">
+                <iframe src="<?= $chanelData[0] ?>"   class='iframe-main'></iframe><br>
+                <iframe src="<?= $chanelData[3] ?>"   class='iframe-main'></iframe>
             </div>
-            <div class="col-sm">
-                <iframe src="<?= $chanelData[1] ?>"  scrolling="no" class='iframe-secondary'></iframe><br>
-                <iframe src="<?= $chanelData[2] ?>"  scrolling="no" class='iframe-secondary'></iframe><br>
-                <iframe src="<?= $chanelData[4] ?>"  scrolling="no" class='iframe-secondary'></iframe>
+            <div class="col-sm mt-3 mt-sm-0 p-1">
+                <iframe src="<?= $chanelData[1] ?>"   class='iframe-secondary'></iframe><br>
+                <iframe src="<?= $chanelData[2] ?>"   class='iframe-secondary'></iframe><br>
+                <iframe src="<?= $chanelData[4] ?>"   class='iframe-secondary'></iframe>
             </div>
-            <div class="col-sm">
+            <div class="col-sm mt-1 mt-sm-0 p-1">
                 <div id="map" style="border: darkgrey 0 solid"></div>
-                <br>
-                <div id="telemetry" class="border border-dark p-3">
-                    <p align="center" class="h4">Telemetry</p>
+                <div id="telemetry" class="border border-light border-4 p-3 text-bg-light mt-3">
+                    <p align="center" class="h5">Telemetry</p>
                     <p><b></b><span id="tel0">Updating..</span></b></p>
                     <p><b>Parked: </b><span id="tel3">Updating..</span></p>
                     <p><b>Speed: </b><span id="tel1">Updating..</span></p>
@@ -50,10 +49,6 @@
             </div>
         </div>
     </div>
-
-<!--    --><?php //foreach ($chanelData as $chanel): ?>
-<!--        <iframe src="--><?php //= $chanel ?><!--"  scrolling="no" class='iframe-main'></iframe>-->
-<!--    --><?php //endforeach; ?>
 
 <?php endif; ?>
 <script>

@@ -1,4 +1,5 @@
 .iframe-main {
+    scroll-behavior: unset;
     overflow: hidden;
     border: none;
     min-height: 35vh;
@@ -7,6 +8,7 @@
 }
 
 .iframe-secondary {
+    scroll-behavior: unset;
     overflow: hidden;
     border: none;
     min-height: 25vh;
@@ -39,6 +41,13 @@
     margin-right: 20px; /* Space between logo and text */
 }
 
+/* Social icons styling */
+.social-icons a {
+    margin: 0 10px;
+    color: #333; /* Icon color */
+    font-size: 24px; /* Icon size */
+}
+
 @media (min-width: 600px) {
     .iframe-main {
         width: 100%;
@@ -48,11 +57,9 @@
 @media (max-width: 600px) {
     .iframe-main {
         width: 100%;
-        margin-bottom: 5px;
     }
     .iframe-secondary{
         width:100%;
-        margin-top: 20px;
     }
 
     .container {
@@ -69,15 +76,9 @@
     }
 
     #map {
-        margin-top: 60px;
         max-height: 400px;
     }
 }
 
 
-/* Social icons styling */
-.social-icons a {
-    margin: 0 10px;
-    color: #333; /* Icon color */
-    font-size: 24px; /* Icon size */
-}
+
