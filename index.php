@@ -41,8 +41,8 @@
         </div>
     </div>
 </nav>
-<?php //error_reporting(E_ALL);
-//ini_set('display_errors', 1); ?>
+<?php error_reporting(E_ALL);
+ini_set('display_errors', 1); ?>
 <?php include('apis.php'); ?>
 
 <?php if (!empty($showVideos) && (!empty($chanelData))): ?>
@@ -125,11 +125,11 @@
             }
 
             //Insert telemetry
-
+            console.log(data);
             document.getElementById('tel0').innerHTML = data.online === 1 ? 'Online' : 'Offline';
-            document.getElementById('tel1').innerHTML = data.speed + ' km/h';
+            document.getElementById('tel1').innerHTML = data.speed/10 + ' km/h';
             document.getElementById('tel2').innerHTML = degToCompass(data.direction);
-            document.getElementById('tel3').innerHTML = data.park/60 + ' min';
+            document.getElementById('tel3').innerHTML = Math.floor(data.park/60) + ' min';
             document.getElementById('tel4').innerHTML = data.mileage/1000 + ' km';
 
 
@@ -144,7 +144,7 @@
     // Fetch data initially and then every 10 seconds
     window.onload = () => {
         fetchData();
-        setInterval(fetchData, 10000);
+        setInterval(fetchData, 5000);
     };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
