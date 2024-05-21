@@ -45,6 +45,24 @@
 ini_set('display_errors', 1); ?>
 <?php include('apis.php'); ?>
 
+<div class="dimmed">
+    <!-- This div has the class "dimmed" -->
+
+    <div class="d-flex flex-column align-items-center justify-content-evenly text-center" style="height: 100%">
+
+        <img src="images/logo_no_bg.png" alt="alternative-text">
+
+
+        <b style="font-size: 32px"> Thank you for your support at NAMPO 2024</b>
+
+
+        <div class="justify-content-center" style="font-size: 26px">For more information on Massey Ferguson products follow the link below:</div>
+
+
+        <a href="https://www.agcocorp.com/" target="_blank" class="btn btn-danger btn-lg" style="width: 300px">AGCO website</a>
+    </div>
+</div>
+
 <?php if (!empty($showVideos) && (!empty($chanelData))): ?>
     <div class="container-fluid">
         <div class="row p-1">

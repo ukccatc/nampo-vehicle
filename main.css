@@ -49,13 +49,34 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
+.dimmed {
+    position: absolute;
+    left: 100px;
+    top: 180px;
+    background: rgba(255, 255, 255, .95);
+    width: 90%;
+    height: 90%;
+    z-index: 1000;
+}
+
 @media (min-width: 600px) {
     .iframe-main {
         width: 100%;
     }
+
 }
 
 @media (max-width: 600px) {
+    img {
+        width: 90%;
+    }
+    .dimmed {
+        width: 100%;
+        left: 0;
+        top: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .iframe-main {
         width: 100%;
     }
