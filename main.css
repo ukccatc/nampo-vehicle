@@ -59,6 +59,23 @@
     z-index: 1000;
 }
 
+.agco-button {
+    padding: 15px 20px 11px !important;
+    width: 150px;
+    background-color: #c41230 !important;
+    color: #fff !important;
+    border-radius: 0.3rem !important;
+    font-size: 16px !important;
+    justify-content: center;
+    letter-spacing: 0.2px !important;
+    line-height: 1 !important;
+    transition: background-color 0.3s ease !important;
+    border: 0;
+}
+
+.agco-button:hover {
+    background-color: #ad102a !important;
+}
 @media (min-width: 600px) {
     .iframe-main {
         width: 100%;

@@ -48,18 +48,18 @@ ini_set('display_errors', 1); ?>
 <div class="dimmed">
     <!-- This div has the class "dimmed" -->
 
-    <div class="d-flex flex-column align-items-center justify-content-evenly text-center" style="height: 100%">
+    <div class="d-flex flex-column align-items-center text-center" style="height: 80%">
 
         <img src="images/logo_no_bg.png" alt="alternative-text">
 
-
+        <br><br><br>
         <b style="font-size: 32px"> Thank you for your support at NAMPO 2024</b>
-
+        <br><br>
 
         <div class="justify-content-center" style="font-size: 26px">For more information on Massey Ferguson products follow the link below:</div>
+        <br><br><br>
 
-
-        <a href="https://www.agcocorp.com/" target="_blank" class="btn btn-danger btn-lg" style="width: 300px">AGCO website</a>
+        <a href="https://www.agcocorp.com/" target="_blank" class="btn agco-button" style="font-family: Helvetica Neue\ 57, Helvetica, Arial, sans-serif !important;">Find out more</a>
     </div>
 </div>
 
